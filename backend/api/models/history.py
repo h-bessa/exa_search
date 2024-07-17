@@ -7,5 +7,7 @@ class History(SQLModel, table=True):
     query: str
     user_id: Optional[int] = Field(default=None, foreign_key="user.id")
 
+    user: Optional["User"] = Relationship(back_populates="history")
 
-History.owner = Relationship(back_populates="history")
+
+from .user import User

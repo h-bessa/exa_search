@@ -1,7 +1,10 @@
 from .crud_user import (
     get_user,
-    # get_user_by_email,
-    # create_user,
-    # get_searches,
-    # create_user_search
+    create_user,
+    get_user_by_email,
+)
+
+from .crud_history import (
+    get_history_by_user_id,
+    create_history
 )

@@ -12,6 +12,10 @@ class UserCreate(UserBase):
     password: str
 
 
+class UserRead(UserBase):
+    id: int
+
+
 class User(UserBase):
     id: int
     history: List[History] = []
